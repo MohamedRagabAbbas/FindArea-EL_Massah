@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="FindArea.Pages.PopUpPage"
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+            xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+            BackgroundColor="Transparent"
+            
+    >
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+                      PositionIn="Center"  
+                      PositionOut="Center"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="300"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"  
+                      
+      HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center"  Padding="20,0" HorizontalOptions="Center" >
+        <Frame CornerRadius="20" Padding="0" BackgroundColor="#864879" >
+            <StackLayout Padding="10">
+                <Label x:Name="lable" TextColor="#0F0E0E" FontSize="25" HorizontalOptions="Center"></Label>
+                <Label x:Name="lable2" TextColor="#541212" FontSize="25" HorizontalOptions="Center"/>
+                <StackLayout>
+                        <StackLayout Orientation="Vertical">
+                        <Frame CornerRadius="30" Padding="0" >
+                            <Image x:Name="iamge" Aspect="Fill" HeightRequest="400" WidthRequest="300"/>
+                        </Frame>
+                        <Button Text="غلق" TextColor="Black" x:Name="close" Clicked="close_Clicked" CornerRadius="50" BackgroundColor="#E9A6A6"></Button>
+                        </StackLayout>
+                    </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FindArea.Pages.SavedData" BackgroundColor="#00EAD3" Padding="15" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="new_project.png" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="calc.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="file.png"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout  HorizontalOptions="Start" VerticalOptions="Start" Padding="0">
+        <SearchBar Placeholder="ابحث" TextChanged="SearchBar_TextChanged" x:Name="search"/>
+        <ListView x:Name="listview" ItemSelected="listview_ItemSelected" HasUnevenRows="True" HorizontalOptions="Start" VerticalOptions="Start" FlowDirection="RightToLeft">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="70"  Margin="0,0,0,15" BackgroundColor="#FF449F" WidthRequest="250" Padding="0" >
+                            <StackLayout Orientation="Horizontal" Padding="0">
+                                <AbsoluteLayout Padding="0" FlowDirection="RightToLeft" HorizontalOptions="Start" Margin="0,0,30,0" VerticalOptions="Start" WidthRequest="240" HeightRequest="150" >
+                                    <StackLayout AbsoluteLayout.LayoutBounds="0,0,200,40" Orientation="Horizontal" VerticalOptions="Start" >
+                                        <Label Text=" الاسم/" FontFamily="font3" FontSize="18" TextColor="Black" />
+                                        <Label Text="{Binding Name}" x:Name="name" FontFamily="font3" FontSize="18" TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout  AbsoluteLayout.LayoutBounds="0,40,200,40" Orientation="Horizontal" VerticalOptions="Start">
+                                        <Label Text=" التاريخ/" FontFamily="font3" FontSize="18" TextColor="Black" />
+                                        <Label Text="{Binding Date}" x:Name="date" FontFamily="font3" FontSize="18" TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout  AbsoluteLayout.LayoutBounds="0,80,200,40" Orientation="Horizontal" VerticalOptions="Start">
+                                        <Label Text=" المساحة الكلية/" FontFamily="font3" FontSize="18" TextColor="Black"/>
+                                        <Label Text="{Binding TotalArea}" x:Name="area" FontFamily="font3" FontSize="18" TextColor="Black"/>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                                <Frame Padding="0" Margin="5,0,0,0" CornerRadius="100" HeightRequest="120" WidthRequest="120" VerticalOptions="Center" HorizontalOptions="End">
+                                    <Image Source="{Binding ImagePath}" Aspect="Fill"/>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="مسح" x:Name="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+</ContentPage>
+<!--         Padding="0,0,30,5"               <TextCell  Text="{Binding Name}" Detail="{Binding Date}" CommandParameter="{Binding .}" >
+    <TextCell.ContextActions>
+        <MenuItem Text="Delete" Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"/>
+    </TextCell.ContextActions>
+    </TextCell> -->                        

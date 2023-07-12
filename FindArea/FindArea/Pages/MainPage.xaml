@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FindArea.Pages.MainPage" 
+             BackgroundColor="#B6FFCE"
+             >
+
+    <ContentPage.Content>
+        
+            <StackLayout>
+                <StackLayout Margin="0" HeightRequest="150" >
+                <Label Text="المساح" FontFamily="font2" FontSize="60" TextColor="#222831" HorizontalTextAlignment="Center" Padding="0" VerticalTextAlignment="Center"/>
+                </StackLayout>
+            <Frame CornerRadius="120" HorizontalOptions="Center" VerticalOptions="Start" Padding="0" Margin="0">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#F6FFA4" Padding="20">
+                    <StackLayout>
+                        <Frame CornerRadius="50" HasShadow="True" BorderColor="#FDD7AA" HorizontalOptions="Center" VerticalOptions="Center" Padding="0">
+                            <Image x:Name="image" WidthRequest="300" HeightRequest="150" Aspect="Fill"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Padding="0,20,0,0">
+                        <Button Text="إبدأ مشروع جديد" Padding="0" FontFamily="font1" TextColor="#060930" FontSize="25" CornerRadius="30" Font="23" x:Name="NewProject" Clicked="NewProject_Clicked" BackgroundColor="#FDD7AA" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="200" />
+                        <Button Text="الحاسبة" CornerRadius="30"  Padding="0" FontFamily="font1" TextColor="#060930" FontSize="25" x:Name="Calculator" Clicked="Calculator_Clicked" BackgroundColor="#FDD7AA" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="200" Margin="0,7,0,7"/>
+                        <Button Text="المشروعات القديمة" CornerRadius="30"    Padding="0" FontFamily="font1" TextColor="#060930" FontSize="25" x:Name="Data" Clicked="Data_Clicked" BackgroundColor="#FDD7AA" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="200"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FindArea.Pages.NewProjectPage" 
+             BackgroundColor="#B6FFCE"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="new_project.png"/>
+        <ToolbarItem IconImageSource="calc.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="file.png" Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Frame CornerRadius="70" HorizontalOptions="Center" VerticalOptions="Center" Padding="0">
+            <StackLayout BackgroundColor="#F6FFA4" HorizontalOptions="Center" VerticalOptions="Center" Padding="15" FlowDirection="RightToLeft">
+                <Grid RowSpacing="8" ColumnSpacing="1"  x:Name="new_project_grid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="#c4daed" OutlineColor="Red" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="0" Grid.Column="0" >
+                        <Label Text="الاول"  HeightRequest = "150"  FontSize="20"  HorizontalOptions="CenterAndExpand" FontFamily="font2" VerticalOptions="CenterAndExpand" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#c4daed" OutlineColor="Red" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="0" >
+                        <Label Text=" الثاني" HeightRequest = "150" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="2" Grid.Column="0">
+                        <Label Text="الثالث" HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="3" Grid.Column="0">
+                        <Label Text="الرابع" HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="4" Grid.Column="0">
+                        <Label Text="الخامس" HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="0" Grid.Column="4">
+                        <Label Text="الاول" HeightRequest = "150"   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  x:Name="L_D1" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="4">
+                        <Label Text="الثاني"  HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="L_D2" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="2" Grid.Column="4">
+                        <Label Text="الثالث"  HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="L_D3" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="3" Grid.Column="4">
+                        <Label Text="الرابع" HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  x:Name="L_D4" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="4" Grid.Column="4">
+                        <Label Text="الخامس" HeightRequest = "150"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="L_D5" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="1">
+                        <Entry  Placeholder="ادخل"  VerticalTextAlignment="Center" Keyboard="Telephone" x:Name="E_1_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" />
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="2">
+                        <Entry  Placeholder="ادخل"  VerticalTextAlignment="Center" Keyboard="Telephone" x:Name="E_1_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="3">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_1_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="1">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center" Keyboard="Telephone" x:Name="E_2_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="2">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center" Keyboard="Telephone" x:Name="E_2_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="3">
+                        <Entry  Placeholder="ادخل"  VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_2_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="2" Grid.Column="1">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_3_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="2" Grid.Column="2">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_3_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="2" Grid.Column="3">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_3_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="3" Grid.Column="1">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_4_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="3" Grid.Column="2">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_4_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="3" Grid.Column="3">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_4_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="4" Grid.Column="1">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_5_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="4" Grid.Column="2">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_5_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                    <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="4" Grid.Column="3">
+                        <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_5_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                    </Frame>
+                </Grid>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="45"/>
+                            <RowDefinition Height="45"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="1">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_6_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="2">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_6_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="3">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_6_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="4">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_6_4" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="0" Grid.Column="0">
+                            <Label Text="الاول"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="0" Grid.Column="5">
+                            <Label Text="الاول" x:Name="SL1"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="1">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center" Keyboard="Telephone" x:Name="E_7_1" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="2">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_7_2" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="3">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_7_3" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="#F08080" BackgroundColor="#FFA8A8" HasShadow="True" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="4">
+                            <Entry  Placeholder="ادخل" VerticalTextAlignment="Center"  Keyboard="Telephone" x:Name="E_7_4" WidthRequest = "300" HeightRequest = "150" FontSize="15" FontFamily="number2" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="0">
+                            <Label Text="الثاني" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="5">
+                            <Label Text="الثاني" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  x:Name="SL2" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        
+                    </Grid>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="10" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" >
+                            <Label Text="المساحة الكلية"  x:Name="L_D6" FontSize="25" FontFamily="font1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+                        <Button Text="احسب" x:Name="compute" FontSize="25" FontFamily="font1" Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Clicked="compute_Clicked" BackgroundColor="#FDD7AA" CornerRadius="20" BorderColor="Gray" BorderWidth="2" />
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
+                            <Label Text="اسم صاحب الارض" FontSize="20" FontFamily="font2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" >
+                            <Entry  Placeholder="ادخل اسم صاحب الارض" FontSize="20" FontFamily="font1" Keyboard="Text" x:Name="owner_name" WidthRequest = "300" HeightRequest = "200" HorizontalTextAlignment="Center"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                        </Frame>
+
+                        <Button Text="التقط صورة" x:Name="PickPhoto"  FontSize="25" FontFamily="font1" Clicked="PickPhoto_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"   BackgroundColor="#FDD7AA" CornerRadius="20" BorderColor="Gray" BorderWidth="2" />
+                        <Frame OutlineColor="Red" BackgroundColor="#c4daed" HasShadow="True" CornerRadius="20" Padding="0" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" >
+                            <ImageButton  Aspect="Fill" x:Name="I_photo"  WidthRequest="500" HeightRequest="100" IsOpaque="True"/>
+                        </Frame>
+                        <Button Text="حفظ جميع البيانات" x:Name="Save" FontSize="25" FontFamily="font1" Clicked="Save_Clicked" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"  BackgroundColor="#FDD7AA" CornerRadius="20" BorderColor="Gray" BorderWidth="2" />
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

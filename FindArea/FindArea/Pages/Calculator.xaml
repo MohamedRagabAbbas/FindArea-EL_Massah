@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FindArea.Pages.Calculator"
+             BackgroundColor="#1C0C5B"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="new_project.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="calc.png" />
+        <ToolbarItem IconImageSource="file.png" Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="0,0,0,10" >
+            <Grid RowSpacing="5" ColumnSpacing="5"  x:Name="mainGrid" Margin="10,10,10,10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                    <RowDefinition Height="78" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Padding="10,0,0,0" BackgroundColor="Transparent" CornerRadius="30">
+                    <Entry x:Name="E_input"  TextColor="White" FontSize="25" FontFamily="number2"/>
+                </Frame>
+                <Button Text ="⇽" FontSize="40" BackgroundColor="PeachPuff" Grid.Row="1" Grid.Column="3" x:Name="B_back" Clicked="B_back_Clicked"  BorderRadius="8" Padding="8" FontFamily="number1"/>
+                <Button Text ="Reset" FontSize="18" BackgroundColor="PeachPuff" FontFamily="number1" Grid.Row="1" Grid.Column="0" x:Name="B_reset" Clicked="B_reset_Clicked" BorderRadius="8" Padding="8" />
+                <Button Text ="X²" FontSize="25" BackgroundColor="PeachPuff" FontFamily="number1" Grid.Row="1" Grid.Column="1" x:Name="B_squar"  Clicked="B_squar_Clicked"  BorderRadius="8" Padding="8" />
+                <Button Text ="√" FontSize="30" BackgroundColor="PeachPuff" FontFamily="number1" Grid.Row="1" Grid.Column="2" x:Name="B_root"  Clicked="B_root_Clicked"  BorderRadius="8" Padding="8" />
+                <Button Text ="/" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="2" Grid.Column="2" x:Name="B_division" Clicked="B_division_Clicked" BorderRadius="8" Padding="8" />
+                <Button Text ="(" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="2" Grid.Column="0" x:Name="B_left_par" Clicked="B_left_par_Clicked"  BorderRadius="8" Padding="8" />
+                <Button Text =")" FontSize="30" BackgroundColor="PeachPuff"   FontFamily="number1" Grid.Row="2" Grid.Column="1" x:Name="B_right_par" Clicked="B_right_par_Clicked"  BorderRadius="8" Padding="8" />
+                <Button Text ="*" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="2" Grid.Column="3" x:Name="B_multiplication" Clicked="B_multiplication_Clicked" BorderRadius="8" Padding="8" />
+                <Button Text ="-" FontSize="40" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="4" Grid.Column="3" x:Name="B_minus"   Clicked="B_minus_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="7" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="3" Grid.Column="0" x:Name="B_number7" Clicked="B_number7_Clicked" BorderRadius="8" Padding="8" />
+                <Button Text ="8" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="3" Grid.Column="1" x:Name="B_number8" Clicked="B_number8_Clicked" BorderRadius="8" Padding="8" />
+                <Button Text ="9" FontSize="20" BackgroundColor="WhiteSmoke"  FontFamily="number1" Grid.Row="3" Grid.Column="2" x:Name="B_number9" Clicked="B_number9_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="+" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="3" Grid.Column="3" x:Name="B_plus"    Clicked="B_plus_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="4" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="4" Grid.Column="0" x:Name="B_number4" Clicked="B_number4_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="5" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="4" Grid.Column="1" x:Name="B_number5" Clicked="B_number5_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="6" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="4" Grid.Column="2" x:Name="B_number6" Clicked="B_number6_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="1" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="5" Grid.Column="0" x:Name="B_number1" Clicked="B_number1_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="2" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="5" Grid.Column="1" x:Name="B_number2" Clicked="B_number2_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="3" FontSize="20" BackgroundColor="WhiteSmoke" FontFamily="number1"  Grid.Row="5" Grid.Column="2" x:Name="B_number3" Clicked="B_number3_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="=" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="5" Grid.Column="3" x:Name="B_equal"   Clicked="B_equal_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="≈" FontSize="30" BackgroundColor="PeachPuff"  FontFamily="number1"  Grid.Row="6" Grid.Column="3" x:Name="B_rownd"   Clicked="B_rownd_Clicked"  BorderRadius="8" Padding="8"/>
+                <Button Text ="0" FontSize="20" BackgroundColor="WhiteSmoke"  FontFamily="number1" Grid.Row="6" Grid.Column="0" x:Name="B_number0"  Clicked="B_number0_Clicked" BorderRadius="8" Padding="8"/>
+                <Button Text ="Last" FontSize="18" BackgroundColor="WhiteSmoke" FontFamily="number1" Grid.Row="6" Grid.Column="2" x:Name="B_last"  Clicked="B_last_Clicked"  BorderRadius="8" Padding="8"/>
+                <Button Text ="." FontSize="30" BackgroundColor="WhiteSmoke"  FontFamily="number1" Grid.Row="6" Grid.Column="1" x:Name="B_dot" Clicked="B_dot_Clicked" BorderRadius="8" Padding="8"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

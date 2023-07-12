@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Amiri-Bold.ttf" />
+    <None Remove="Fonts\Amiri-BoldItalic.ttf" />
+    <None Remove="Fonts\Amiri-Italic.ttf" />
+    <None Remove="Fonts\Amiri-Regular.ttf" />
+    <None Remove="Fonts\ArefRuqaa-Regular.ttf" />
+    <None Remove="Fonts\KdamThmorPro-Regular.ttf" />
+    <None Remove="Fonts\NotoNastaliqUrdu-Regular.ttf" />
+    <None Remove="Fonts\Oswald-VariableFont_wght.ttf" />
+    <None Remove="Images\new_project.png" />
+    <None Remove="Images\Surveyor.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Amiri-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Amiri-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Amiri-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Amiri-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\ArefRuqaa-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\KdamThmorPro-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\NotoNastaliqUrdu-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Oswald-VariableFont_wght.ttf" />
+    <EmbeddedResource Include="Images\new_project.png" />
+    <EmbeddedResource Include="Images\Surveyor.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\Calculator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\NewProjectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\PopUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SavedData.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
