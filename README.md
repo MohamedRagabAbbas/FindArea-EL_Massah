@@ -38,13 +38,14 @@ https://github.com/MohamedRagabAbbas/FindArea-EL_Massah.git
 - Store customer data, including name, organization, and additional details.
 - Capture and save photos of reports or related documents.
 - Retrieve stored data and reports for future reference.
-
+<div>
 <img src="ScreenShots/ScreenShots_1.jpeg" alt="Alt text" width="260" height="500" />
 <img src="ScreenShots/ScreenShots_2.jpeg" alt="Alt text" width="260" height="500" />
 <img src="ScreenShots/ScreenShots_3.jpeg" alt="Alt text" width="260" height="500" />
 <img src="ScreenShots/ScreenShots_4.jpeg" alt="Alt text" width="260" height="500" />
 <img src="ScreenShots/ScreenShots_5.jpeg" alt="Alt text" width="260" height="500" />
 <img src="ScreenShots/ScreenShots_6.jpeg" alt="Alt text" width="260" height="500" />
+</div>
 
 
 ## Contributing
